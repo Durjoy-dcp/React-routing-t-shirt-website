@@ -12,7 +12,8 @@ function App() {
       element: <Main></Main>,
       children: [{
         path: '/',
-        element: <Shirts></Shirts>
+        element: <Shirts></Shirts>,
+        loader: () => fetch('tshirts.json')
       }]
     }
 
