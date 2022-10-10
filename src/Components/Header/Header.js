@@ -11,8 +11,8 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand href="#home">Shirt Hub</Navbar.Brand>
                     <Nav className="ms-auto nav-link">
-                        <Link to='/'><Nav.Link >Order</Nav.Link></Link>
-                        <Link><Nav.Link href="#features">Features</Nav.Link></Link>
+                        <Nav.Link >Order</Nav.Link>
+
 
 
                     </Nav>
