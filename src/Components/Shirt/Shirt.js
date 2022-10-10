@@ -18,7 +18,7 @@ const Shirt = ({ shirt }) => {
 
                     </Card.Text>
                     {/* <Card.Footer></Card.Footer> */}
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button className="w-100" variant="primary">Add to Cart</Button>
                 </Card.Body>
             </Card>
         </Col>
