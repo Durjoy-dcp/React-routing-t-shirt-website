@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
+import ProductReview from '../ProductReview/ProductReview';
 import Shirt from '../Shirt/Shirt';
 import './Shirts.css';
 const Shirts = () => {
     const shirts = useLoaderData();
-    console.log(shirts);
+    const [cart, setCart] = useState([]);
+    const handleToAddCart = shirt => {
+
+        const shirtCheck = cart.find(sh => sh._id === shirt._id);
+        if (shirtCheck) {
+            alert("This is added ");
+        } else {
+            const cartAdded = [...cart, shirt];
+            console.log(cartAdded);
+            setCart(cartAdded);
+        }
+
+    }
+
+    // console.log(shirts);
     return (
         <div className='display-container'>
             <Container fluid >
@@ -15,13 +30,13 @@ const Shirts = () => {
                             <h3 className='text-center my-4 fw-bold mb-1'>Select Your shirts</h3>
                             {
 
-                                shirts.map(shirt => <Shirt key={shirt._id} shirt={shirt}></Shirt>)
+                                shirts.map(shirt => <Shirt key={shirt._id} handleToAddCart={handleToAddCart} shirt={shirt}></Shirt>)
                             }
                         </Row>
 
                     </Col>
                     <Col sm={12} md={4} className="">
-                        <h1>This is a product overview </h1>
+                        <ProductReview shirts={cart}></ProductReview>
                     </Col>
 
                 </Row>

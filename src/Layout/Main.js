@@ -6,7 +6,7 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <div style={{ "margin-top": "80px" }}></div>
+            <div style={{ "marginTop": "80px" }}></div>
             <Outlet ></Outlet>
 
         </div>

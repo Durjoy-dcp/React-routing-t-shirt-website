@@ -1,0 +1,9 @@
+.dlt-button {
+    width: 55px;
+    height: 55px;
+    background-color: rgba(248, 158, 142, 0.798);
+    border: none;
+    color: rgb(181, 56, 34);
+    font-size: 31px;
+    border-radius: 50%;
+}

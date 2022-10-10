@@ -3,8 +3,8 @@ import { Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-const Shirt = ({ shirt }) => {
-    const { id, price, picture, name } = shirt
+const Shirt = ({ shirt, handleToAddCart }) => {
+    const { _id, price, picture, name } = shirt
     return (
 
         <Col sm={6} lg={4} className="g-5" >
@@ -15,10 +15,9 @@ const Shirt = ({ shirt }) => {
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
                         <span>Price : ${price}</span>
-
                     </Card.Text>
                     {/* <Card.Footer></Card.Footer> */}
-                    <Button className="w-100" variant="primary">Add to Cart</Button>
+                    <Button onClick={() => handleToAddCart(shirt)} className="w-100" variant="primary">Add to Cart</Button>
                 </Card.Body>
             </Card>
         </Col>
