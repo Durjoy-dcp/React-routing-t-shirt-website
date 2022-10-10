@@ -10,17 +10,17 @@ const Shirts = () => {
         <div className='display-container'>
             <Container fluid >
                 <Row >
-                    <Col sm={12} md={8} className="border">
-                        <Row>
-
+                    <Col sm={12} md={8} className="">
+                        <Row >
+                            <h3 className='text-center my-4 fw-bold mb-1'>Select Your shirts</h3>
                             {
 
-                                shirts.map(shirt => <Shirt></Shirt>)
+                                shirts.map(shirt => <Shirt key={shirt._id} shirt={shirt}></Shirt>)
                             }
                         </Row>
 
                     </Col>
-                    <Col sm={12} md={4} className="border">
+                    <Col sm={12} md={4} className="">
                         <h1>This is a product overview </h1>
                     </Col>
 
