@@ -19,6 +19,10 @@ const Shirts = () => {
         }
 
     }
+    const handleToRemoveCart = shirt => {
+        const remaining = cart.filter(sh => sh._id !== shirt._id);
+        setCart(remaining);
+    }
 
     // console.log(shirts);
     return (
@@ -36,7 +40,7 @@ const Shirts = () => {
 
                     </Col>
                     <Col sm={12} md={4} className="">
-                        <ProductReview shirts={cart}></ProductReview>
+                        <ProductReview handleToRemoveCart={handleToRemoveCart} shirts={cart}></ProductReview>
                     </Col>
 
                 </Row>

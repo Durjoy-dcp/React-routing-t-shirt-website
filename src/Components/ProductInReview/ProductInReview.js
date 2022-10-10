@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './ProductInReview.css'
-const ProductInReview = ({ shirt }) => {
+const ProductInReview = ({ shirt, handleToRemoveCart }) => {
     const { _id, price, picture, name } = shirt
     return (
         <div className='d-flex my-3 bg-white align-items-center'>
@@ -18,7 +18,7 @@ const ProductInReview = ({ shirt }) => {
                     <p>${price}</p>
                 </div>
                 <div className='p-5'>
-                    <button className='dlt-button'>
+                    <button onClick={() => handleToRemoveCart(shirt)} className='dlt-button'>
 
                         <FontAwesomeIcon icon={faTrashAlt} />
                     </button>
